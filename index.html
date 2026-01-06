@@ -1,51 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
-    <link rel="stylesheet" href="../CSS/welcome.css" />
-    
-    <title>Welcome Page</title>
-  </head>
-  <body>
+    <title>LEO RESTAURANT</title>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;700;900&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./css/welcome.css" />
+</head>
+<body>
     <header>
-      <h1>LEO RESTAURANT</h1>
-      <nav>
-        <a>Login</a>
-        <a>Sign up</a>
-      </nav>
+        <div class="logo">LEO RESTAURANT</div>
+        <nav>
+            <a href="#" class="nav-link">Login</a>
+            <a href="#" class="nav-btn">Sign up</a>
+        </nav>
     </header>
-    
-    <section>
-      <h2>WELCOME</h2>
-      <img src="./assets/leo-restaurant.avif" style="width: 100%; height: auto;" alt="Leo Restaurant Banner" />
-    </section>
-    
-    <div class="top-left-text">
-      <ul>
-        <li>LEO Restaurant <br />Categories</li>
-        
-        <li><a href="./HTML/Breakfast.html">Breakfast</a></li>
-        <li><a href="./HTML/Lunch.html">Lunch</a></li>
-        <li><a href="./HTML/Dinner.html">Dinner</a></li>
-        <li><a href="./HTML/Juice.html">Juice</a></li>
-        <li><a href="./HTML/Snacks.html">Snacks</a></li>
-      </ul>
-    </div>
-    
+
+    <main>
+        <aside class="sidebar">
+            <h3>Menu Categories</h3>
+            <ul>
+                <li><a href="./HTML/Breakfast.html"> Breakfast</a></li>
+                <li><a href="./html/Lunch.html"> Lunch</a></li>
+                <li><a href="./html/Dinner.html"> Dinner</a></li>
+                <li><a href="./html/Juice.html"> Juice</a></li>
+                <li><a href="./html/Snacks.html"> Snacks</a></li>
+            </ul>
+        </aside>
+
+        <section class="hero">
+            <div class="hero-content">
+                <h2>WELCOME TO <br><span>LEO RESTAURANT</span></h2>
+                <p>Taste the tradition in every bite.</p>
+            </div>
+            <div class="hero-image">
+                <img src="./assets/leo-restaurant.avif" alt="Leo Restaurant Banner" />
+            </div>
+        </section>
+    </main>
+
     <footer>
-      <nav>
-        <div class="footer-group">
-          <a href="./HTML/contact.html">Contact Us</a>
-          <a href="./HTML/help.html">Help & Support</a>
+        <div class="footer-links">
+            <a href="./HTML/contact.html">Contact Us</a>
+            <a href="./HTML/help.html">Help & Support</a>
         </div>
-      </nav>
-      <p> &#169; LEO RESTAURANT 2025 | Follow us on Facebook | Instagram</p>
+        <p>© LEO RESTAURANT 2026 | Follow us on Facebook | Instagram</p>
     </footer>
-  </body>
+</body>
 </html>

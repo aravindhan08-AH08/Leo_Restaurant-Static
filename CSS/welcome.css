@@ -1,112 +1,158 @@
-header {
-  position: absolute;
-  width: 100%;
-  background: #ff8c42;
-  color: white;
-  padding: 15px;
-  top: 0;
-  z-index: 1000;
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-header h1 {
-  margin: 0;
-  text-align: center;
-  font-size: 50px;
-  font-family: "Crimson Pro", serif;
-}
+
 body {
-  margin: 0;
-}
-nav {
-  text-align: center;
-  margin-top: 15px;
-}
-nav a {
-  color: white;
-  margin: 0 20px;
-  text-decoration: none;
-  font-size: 18px;
-}
-nav a:hover {
-  text-decoration: underline;
-}
-section {
-  display: flex;
-  justify-content: center;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+    overflow-x: hidden;
 }
 
-section > ul {
-  text-align: left;
-  margin-right: 1100px;
+/* Header - Modern & Sticky */
+header {
+    background: #ff8c42;
+    padding: 15px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
-h2 {
-  text-align: center;
-  margin-top: 200px;
-  margin-left: 150px;
-  font-size: xx-large;
-  font-weight: 800;
-  position: absolute;
-  color: white;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+header .logo {
+    font-family: 'Crimson Pro', serif;
+    font-size: 35px;
+    font-weight: 900;
+    color: white;
+    letter-spacing: 1px;
 }
 
-.top-left-text {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 300px;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  background-color: rgb(140, 217, 238);
+header nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: 600;
+    transition: 0.3s;
 }
-ul > li {
-  list-style-type: none;
-  font-size: 24px;
-  border-bottom: 2px solid;
-  width: 300px;
-  text-align: center;
-  position: relative;
-  right: 40px;
+
+.nav-btn {
+    background: white;
+    color: #ff8c42 !important;
+    padding: 8px 20px;
+    border-radius: 25px;
 }
-ul {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
+
+/* Main Layout */
+main {
+    display: flex;
+    min-height: 80vh;
 }
-#back-to {
-  text-decoration: none;
-  color: black;
+
+/* Sidebar - Premium Look */
+.sidebar {
+    width: 300px;
+    background: #ffffff;
+    padding: 40px 20px;
+    box-shadow: 4px 0 15px rgba(0,0,0,0.05);
 }
-#back-to:hover {
-  text-decoration: underline;
+
+.sidebar h3 {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: #ff8c42;
+    border-left: 4px solid #ff8c42;
+    padding-left: 10px;
 }
-#to {
-  color: black;
-  text-decoration: none;
+
+.sidebar ul {
+    list-style: none;
 }
-#to:hover {
-  text-decoration: underline;
-  color: white;
+
+.sidebar li {
+    margin-bottom: 15px;
 }
+
+.sidebar a {
+    text-decoration: none;
+    color: #444;
+    font-size: 18px;
+    display: block;
+    padding: 12px 15px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.sidebar a:hover {
+    background: #fff3e0;
+    color: #ff8c42;
+    transform: translateX(10px);
+}
+
+/* Hero Section */
+.hero {
+    flex: 1;
+    position: relative;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hero-content {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.hero h2 {
+    font-family: 'Crimson Pro', serif;
+    font-size: 50px;
+    font-weight: 900;
+    line-height: 1.1;
+}
+
+.hero h2 span {
+    color: #ff8c42;
+}
+
+.hero-image img {
+    width: 100%;
+    max-width: 800px;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+}
+
+/* Footer */
 footer {
-  background-color: #ff8c42;
-  color: white;
-  text-align: center;
-  padding: 10px;
-  position: absolute;
-  bottom: 0px;
-  width: 100%;
+    background: #333;
+    color: white;
+    padding: 30px;
+    text-align: center;
 }
-.footer-group {
-  justify-content: center;
-  gap: 15px;
-  display: flex;
-  text-decoration: none;
+
+.footer-links {
+    margin-bottom: 15px;
 }
-.footer-group:hover {
-  text-decoration: white;
-  color: white;
+
+.footer-links a {
+    color: #ff8c42;
+    margin: 0 15px;
+    text-decoration: none;
+}
+
+footer p {
+    font-size: 14px;
+    opacity: 0.7;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    main { flex-direction: column; }
+    .sidebar { width: 100%; }
+    .hero h2 { font-size: 35px; }
 }
